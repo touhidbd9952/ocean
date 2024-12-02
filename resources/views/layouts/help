@@ -1,0 +1,24 @@
+///////layouts//////////////////////////////////////////////
+fontend_master      //login, registration, message show 
+fontend_master2     //customer panel or job provider panel
+fontend_master3     //freeman panel or job seeker panel
+
+
+////////Session////////////////////////////////////////////
+Session::put('logger_provider_id',$jobproviderinfo[0]->id) ;
+Session::put('logger_provider_code',$jobproviderinfo[0]->s_code) ;
+Session::put('logger_provider_title',$jobproviderinfo[0]->title) ;
+
+$logger_provider_id = Session::get('logger_provider_id') ;
+$logger_provider_code = Session::get('logger_provider_code') ;
+$logger_provider_title = Session::get('logger_provider_title') ;
+
+Session::forget('logger_provider_id');
+Session::forget('logger_provider_code');
+Session::forget('logger_provider_title');
+
+Session::put('logger_seeker_id',$jobseekerinfo[0]->id) ;
+Session::put('logger_seeker_code',$jobseekerinfo[0]->s_code) ;
+Session::put('logger_seeker_title',$jobseekerinfo[0]->title) ;
+
+
